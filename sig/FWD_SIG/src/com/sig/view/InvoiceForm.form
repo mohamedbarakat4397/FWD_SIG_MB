@@ -243,7 +243,7 @@
         </Container>
         <Component class="javax.swing.JButton" name="saveInvBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Save"/>
+            <Property name="text" type="java.lang.String" value="Create New Line"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveInvBtnActionPerformed"/>
@@ -251,7 +251,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="cancelInvBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cancel"/>
+            <Property name="text" type="java.lang.String" value="Delete Line"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="invItmLbl">

@@ -5,7 +5,7 @@
 package com.sig.view;
 
 import com.sig.controller.InvoiceController;
-import com.sig.model.CSVModel;
+import com.sig.model.InvoiceModel;
 
 /**
  *
@@ -21,7 +21,7 @@ public class InvoiceForm extends javax.swing.JFrame {
     public InvoiceForm() {
         initComponents();
                 invoiceController= new InvoiceController(
-        new CSVModel(),this
+        new InvoiceModel(),this
         );
     }
 
@@ -82,14 +82,14 @@ public class InvoiceForm extends javax.swing.JFrame {
         ));
         itmTablePanel.setViewportView(itmTable);
 
-        saveInvBtn.setText("Save");
+        saveInvBtn.setText("Create New Line");
         saveInvBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveInvBtnActionPerformed(evt);
             }
         });
 
-        cancelInvBtn.setText("Cancel");
+        cancelInvBtn.setText("Delete Line");
 
         invItmLbl.setText("Invoice Items:");
 
