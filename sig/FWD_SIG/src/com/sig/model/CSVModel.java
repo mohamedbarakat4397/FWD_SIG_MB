@@ -18,6 +18,7 @@ public class CSVModel {
     List<InvoiceHeader> headersFile;
     String linesFilePath;
      List<InvoiceLine> linesFile;
+     ArrayList<InvoiceLine> currentSelectedInvoicesLineList;
     private DefaultTableModel invTableModel;
     private DefaultTableModel itmTableModel;
     
@@ -144,6 +145,7 @@ invTableModel.setColumnIdentifiers(columnNames);
          }
          return null;
   }
+     
     
   private void fillHeadersTableModel(){
       if(headersFile!=null){
@@ -160,13 +162,15 @@ invTableModel.setColumnIdentifiers(columnNames);
   
    private void fillLinesTableModel(int headerIndex){
       if(linesFile!=null){
-          itmTableModel.setRowCount(0);
-          
+          itmTableModel.setRowCount(0); //Resetting the table model
+          currentSelectedInvoicesLineList=new ArrayList();
           for(InvoiceLine line: linesFile){
               //To filter the current selected header
               if(line.getHeader().getNum()==headerIndex+1){
+                  
            Object[] object={line.getHeader().getNum(),line.getName(),line.getPrice(),line.getCount(),line.getLineTotal()};
               itmTableModel.addRow(object);
+              currentSelectedInvoicesLineList.add(line);
           }
           }
              itmTableModel.fireTableDataChanged();
@@ -201,5 +205,30 @@ invTableModel.setColumnIdentifiers(columnNames);
        headersFile.remove(index);
         invTableModel.fireTableDataChanged();
    }
+   
+      public void createNewItem(InvoiceHeader header,String name,String count,String price){
+       if(linesFile!=null){
+            int size;
+            if(!linesFile.isEmpty()){
+            size=linesFile.size()+1;
+       }
+           InvoiceLine line=new InvoiceLine(header,name,Double.parseDouble(price),Integer.parseInt(count));
+
+       getItmTableModel().addRow(new Object[]{header.getNum(), name, price,count});
+                  linesFile.add(line);
+                  selectHeader(header.getNum()-1);
+           invTableModel.fireTableDataChanged();
+           itmTableModel.fireTableDataChanged();
+   }
+   }
+      
+        public void deleteItem(int index){
+       itmTableModel.removeRow(index);
+      InvoiceLine currentSelectedInvoiceLine= currentSelectedInvoicesLineList.get(index);
+    linesFile.remove(currentSelectedInvoiceLine);
+        itmTableModel.fireTableDataChanged();
+          itmTableModel.fireTableDataChanged();
+   }
+   
 
 }
