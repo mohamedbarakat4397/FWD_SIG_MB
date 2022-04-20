@@ -1,3 +1,5 @@
+**Sales Invoice Generator" using Java programming language
+**
 - Sales Invoice Generator (SIG) App shall display a table for a preview of all the available invoices and another table for each detailed invoice whenever selected
 - SIG App shall display the invoices table that shows: Invoice No., Invoice Date, Customer Name, and the Total amount of the invoice in the table that shows a preview of every invoice (See Screenshot 1, left-side panel)
 - SIG App shall display the detailed invoice in a table that shows: Invoice No., Invoice Date, Customer Name, Invoice Total amount, and all the Invoice Items (See Screenshot 1, right-side panel)
