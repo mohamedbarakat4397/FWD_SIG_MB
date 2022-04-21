@@ -11,12 +11,12 @@ Live image from the console output!
 - SIG App allows the user to edit and save changes on any selected invoice by having a "Create New Line" button to add items and a "Delete Line" to delete items (See Screenshot 1, right-side panel)
 - SIG App abide by the provided GUI (See Screenshots)
 - The sales invoice follows the provided information in the Invoice Header (or Invoice preview) and Invoice table (or Detailed Invoice) that has the details of the invoice (See Screenshot)
-- SIG App has the ability to save the latest status, i.e. the latest created/changed/deleted invoices, with "File" --> "Save" button (See Screenshot 2)
-- SIG App has the ability to load the latest saved status, i.e. the latest created/changed/deleted invoices, with "File" --> "Load" button (See Screenshot 2)
+- SIG App has the ability to save the latest status, i.e. the latest created/changed/deleted invoices, with "File" --> "Save" button (See Screenshot 1)
+- SIG App has the ability to load the latest saved status, i.e. the latest created/changed/deleted invoices, with "File" --> "Load" button (See Screenshot 1)
 - SIG App initially have pre-read invoices that display upon initial booting/starting (See the provided CSV files "in resources" for the initial number of invoices along with their format "Invoice Header + Invoice Line")
 
 Screenshot 1:
-![image](https://user-images.githubusercontent.com/103081048/164325733-37dc96b0-6f30-4e93-a511-51ec89df0293.png)
+![image](https://user-images.githubusercontent.com/103081048/164343760-6834bc12-2bd0-4168-857c-38fa604f8995.png)
 
 Screenshot 2
 ![image](https://user-images.githubusercontent.com/103081048/164325832-0359ddb6-9a6b-495e-85ab-9d7b9b898042.png)
